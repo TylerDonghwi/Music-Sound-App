@@ -40,10 +40,55 @@ header h1 {
 .keyboard>div {
     height: 150px;
     width: 9%;
-    background-color: lightblue;
+    opacity: 70%;
     transition: all 0.4s;
 }
 
 .keyboard>div:hover {
-    background-color: rgb(127, 160, 171);
+    opacity: 100%;
+}
+
+.key1 {
+    background-color: red;
+}
+
+.key2 {
+    background-color: orangered;
+}
+
+.key3 {
+    background-color: orange;
+}
+
+.key4 {
+    background-color: yellow;
+}
+
+.key5 {
+    background-color: greenyellow;
+}
+
+.key6 {
+    background-color: yellowgreen;
+    ;
+}
+
+.key7 {
+    background-color: green;
+}
+
+.key8 {
+    background-color: rgb(135, 172, 235);
+}
+
+.key9 {
+    background-color: blue;
+}
+
+.key10 {
+    background-color: navy;
+}
+
+.key11 {
+    background-color: purple;
 }
