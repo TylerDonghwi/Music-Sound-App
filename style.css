@@ -44,6 +44,10 @@ header h1 {
     transition: all 0.4s;
 }
 
+.keyboard>div>p {
+    color: white;
+}
+
 .keyboard>div:hover {
     opacity: 100%;
 }
@@ -105,6 +109,21 @@ header h1 {
     100% {
         bottom: 0%;
         left: 80%;
+    }
+}
+
+@keyframes jumpReverse {
+    0% {
+        bottom: 0%;
+        left: 80%;
+    }
+    50% {
+        bottom: 50%;
+        left: 50%;
+    }
+    100% {
+        bottom: 0%;
+        left: 20%;
     }
 }
 

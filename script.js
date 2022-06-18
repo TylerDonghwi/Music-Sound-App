@@ -31,7 +31,20 @@ window.addEventListener('load', () => {
         const effect = document.createElement("div")
         visual.appendChild(effect)
         effect.style.backgroundColor = colors[i]
-        effect.style.animation = 'jump 2s ease'
+        if (i === 3) {
+            // fast auuuugh
+            effect.style.animation = 'jump 1.5s ease'
+        } else if (i === 4) {
+            // slow auuuugh
+            effect.style.animation = 'jump 6s ease'
+        } else if (i === 8) {
+            // reverse
+            effect.style.animation = 'jumpReverse 3s ease'
+
+        } else {
+            effect.style.animation = 'jump 3s ease'
+        }
+
         effect.addEventListener('animationend', function() {
             visual.removeChild(this);
         })
