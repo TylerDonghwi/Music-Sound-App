@@ -1,0 +1,49 @@
+* {
+    /* Set the font and reset all the elements' margin and padding */
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+header h1 {
+    margin-top: 50px;
+    font-size: 50px;
+}
+
+.visual {
+    width: 100%
+}
+
+.keyboard {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.keyboard>div {
+    height: 150px;
+    width: 9%;
+    background-color: lightblue;
+    transition: all 0.4s;
+}
+
+.keyboard>div:hover {
+    background-color: rgb(127, 160, 171);
+}
