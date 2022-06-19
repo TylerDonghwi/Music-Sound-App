@@ -90,6 +90,23 @@ window.addEventListener('load', () => {
                 // reverse auuuugh
                 effect.style.animation = 'jumpReverse 3s ease'
                 break
+            case 9:
+                // blessed auuuugh
+                effect.style.animation = 'jumpBlessed 3s ease'
+                break
+            case 10:
+                // cursed auuuugh
+                effect.style.animation = 'jump 3s ease'
+
+                // background change
+                const app = document.querySelector('.app')
+                app.style.animation = "background 3s ease"
+
+                // removed the css from app
+                app.addEventListener('animationend', function() {
+                    app.style.animation = null;
+                })
+                break
             default:
                 // default animation
                 effect.style.animation = 'jump 3s ease'

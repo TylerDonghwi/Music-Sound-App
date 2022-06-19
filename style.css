@@ -47,6 +47,7 @@ header h1 {
 
 .keyboard>div>p {
     color: white;
+    z-index: 1;
     -webkit-text-stroke: 0.5px black;
 }
 
@@ -165,12 +166,14 @@ header h1 {
         left: 20%;
     }
     50% {
+        background-image: url("deepfry.png");
+        background-size: 100px 100px;
         bottom: 60%;
-        left: 50%;
+        left: 45%;
         height: 100px;
         width: 100px;
         border-radius: 0;
-        transform: rotate(720deg);
+        transform: rotate(1080deg);
     }
     100% {
         bottom: 0%;
@@ -185,13 +188,39 @@ header h1 {
     }
     50% {
         bottom: 60%;
-        left: 50%;
+        left: 40%;
         height: 200px;
         width: 200px;
     }
     100% {
         bottom: 0%;
         left: 80%;
+    }
+}
+
+@keyframes jumpBlessed {
+    0% {
+        bottom: 0%;
+        left: 20%;
+    }
+    50% {
+        bottom: 60%;
+        left: 50%;
+        opacity: 0%;
+    }
+    100% {
+        bottom: 0%;
+        left: 80%;
+    }
+}
+
+@keyframes background {
+    50% {
+        background-image: url('auuuugh.jpg');
+        background-size: 100% 100%;
+    }
+    100% {
+        background-image: none;
     }
 }
 
