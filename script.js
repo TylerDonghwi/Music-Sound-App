@@ -53,7 +53,7 @@ window.addEventListener('load', () => {
                 break
             case 4:
                 // slow auuuugh
-                effect.style.animation = 'jump 6s ease'
+                effect.style.animation = 'jump 5s ease'
                 break
             case 5:
                 // echo, create multiple balls
@@ -77,6 +77,14 @@ window.addEventListener('load', () => {
                 effect4.addEventListener('animationend', function() {
                     visual.removeChild(this);
                 })
+                break
+            case 6:
+                // deep fried
+                effect.style.animation = 'jumpDeepFried 3s ease'
+                break
+            case 7:
+                // loud auuugh
+                effect.style.animation = 'jumpLoud 3s ease'
                 break
             case 8:
                 // reverse auuuugh

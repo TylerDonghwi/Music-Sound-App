@@ -159,6 +159,42 @@ header h1 {
     }
 }
 
+@keyframes jumpDeepFried {
+    0% {
+        bottom: 0%;
+        left: 20%;
+    }
+    50% {
+        bottom: 60%;
+        left: 50%;
+        height: 100px;
+        width: 100px;
+        border-radius: 0;
+        transform: rotate(720deg);
+    }
+    100% {
+        bottom: 0%;
+        left: 80%;
+    }
+}
+
+@keyframes jumpLoud {
+    0% {
+        bottom: 0%;
+        left: 20%;
+    }
+    50% {
+        bottom: 60%;
+        left: 50%;
+        height: 200px;
+        width: 200px;
+    }
+    100% {
+        bottom: 0%;
+        left: 80%;
+    }
+}
+
 .visual>div {
     position: absolute;
     height: 50px;
