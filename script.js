@@ -26,23 +26,65 @@ window.addEventListener('load', () => {
         })
     })
 
-    // Effects
-    const createEffect = (i) => {
+    function createBall(i) {
         const effect = document.createElement("div")
         visual.appendChild(effect)
         effect.style.backgroundColor = colors[i]
-        if (i === 3) {
-            // fast auuuugh
-            effect.style.animation = 'jump 1.5s ease'
-        } else if (i === 4) {
-            // slow auuuugh
-            effect.style.animation = 'jump 6s ease'
-        } else if (i === 8) {
-            // reverse
-            effect.style.animation = 'jumpReverse 3s ease'
+        return effect;
+    }
 
-        } else {
-            effect.style.animation = 'jump 3s ease'
+    // Effects
+    const createEffect = (i) => {
+
+        const effect = createBall(i)
+
+        switch (i) {
+            case 1:
+                // high auuugh
+                effect.style.animation = 'jumpHigh 3s ease'
+                break
+            case 2:
+                // low auuugh
+                effect.style.animation = 'jumpLow 3s ease'
+                break
+            case 3:
+                // fast auuugh
+                effect.style.animation = 'jump 1.5s ease'
+                break
+            case 4:
+                // slow auuuugh
+                effect.style.animation = 'jump 6s ease'
+                break
+            case 5:
+                // echo, create multiple balls
+                const effect2 = createBall(5);
+                const effect3 = createBall(5);
+                const effect4 = createBall(5);
+
+                // put animation for these balls
+                effect.style.animation = 'jump 2.1s ease'
+                effect2.style.animation = 'jump 2.7s ease'
+                effect3.style.animation = 'jump 3.3s ease'
+                effect4.style.animation = 'jump 3.9s ease'
+
+                // remove divs after animation ends
+                effect2.addEventListener('animationend', function() {
+                    visual.removeChild(this);
+                })
+                effect3.addEventListener('animationend', function() {
+                    visual.removeChild(this);
+                })
+                effect4.addEventListener('animationend', function() {
+                    visual.removeChild(this);
+                })
+                break
+            case 8:
+                // reverse auuuugh
+                effect.style.animation = 'jumpReverse 3s ease'
+                break
+            default:
+                // default animation
+                effect.style.animation = 'jump 3s ease'
         }
 
         effect.addEventListener('animationend', function() {

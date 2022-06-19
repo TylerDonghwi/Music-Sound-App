@@ -35,6 +35,7 @@ header h1 {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    background-color: white;
 }
 
 .keyboard>div {
@@ -104,7 +105,37 @@ header h1 {
         left: 20%;
     }
     50% {
-        bottom: 50%;
+        bottom: 60%;
+        left: 50%;
+    }
+    100% {
+        bottom: 0%;
+        left: 80%;
+    }
+}
+
+@keyframes jumpHigh {
+    0% {
+        bottom: 0%;
+        left: 20%;
+    }
+    50% {
+        bottom: 90%;
+        left: 50%;
+    }
+    100% {
+        bottom: 0%;
+        left: 80%;
+    }
+}
+
+@keyframes jumpLow {
+    0% {
+        bottom: 0%;
+        left: 20%;
+    }
+    50% {
+        bottom: 40%;
         left: 50%;
     }
     100% {
@@ -119,7 +150,7 @@ header h1 {
         left: 80%;
     }
     50% {
-        bottom: 50%;
+        bottom: 60%;
         left: 50%;
     }
     100% {
